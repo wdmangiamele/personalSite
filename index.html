@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/nav.css">
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>(willMangiamele)</title>
+
+</head>
+<!--
+Thanks for checking out my code :)
+─────────▄──────────────▄────
+────────▌▒█───────────▄▀▒▌───
+────────▌▒▒▀▄───────▄▀▒▒▒▐───
+───────▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐───
+─────▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐───
+───▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀██▀▒▌───
+──▐▒▒▒▄▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▒▌──
+──▌▒▒▐▄█▀▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐──
+─▐▒▒▒▒▒▒▒▒▒▒▒▌██▀▒▒▒▒▒▒▒▒▀▄▌─
+─▌▒▀▄██▄▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌─
+─▌▀▐▄█▄█▌▄▒▀▒▒▒▒▒▒░░░░░░▒▒▒▐─
+▐▒▀▐▀▐▀▒▒▄▄▒▄▒▒▒▒▒░░░░░░▒▒▒▒▌
+▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒░░░░░░▒▒▒▐─
+─▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌─
+─▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐──
+──▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▌──
+────▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀───
+───▐▀▒▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀─────
+──▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▀────────	
+-->
+
+<script>
+$(document).ready(function() {
+    $('#js-content').load('about.html');
+	
+	$('#js-navigation #resume').click(function(e) {
+		console.log("hey");
+		var win = window.open('https://drive.google.com/file/d/1dnULhhdvEMRIRoFI3OiCmvkpciUOUkhH/view?usp=sharing', '_blank');
+		if (win) {
+			//Browser has allowed it to be opened
+			win.focus();
+		} else {
+			//Browser has blocked it
+			alert('Please allow popups for this website');
+		}
+			});
+	
+    $('#js-navigation a').click(function(e) {
+      e.preventDefault();
+      $("#js-content").load(e.target.href);
+    })
+  });
+</script>
+
+<body onload = "typeWriter()">
+	
+	<div id= "mainContainer">
+		
+		<div class = "name" >
+			<p id="name"></p>
+		</div>
+		
+		<!--Typewriter effect -->
+		<script>
+			var i = 0;
+			var txt = "Hi, I'm Will Mangiamele.";
+			var speed = 45;
+
+			function typeWriter() {
+			  if (i < txt.length) {
+				document.getElementById("name").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+			  }
+			}
+		</script>
+		
+		<div class="container brackets" id="js-navigation">
+		  <a href="about.html">ABOUT</a>
+		  <a href="projects.html">PROJECTS</a>
+		  <a id= "resume" href= "resume.html">RESUME</a>
+		  <a href="contact.html">CONTACT</a>
+		</div>
+		
+		<div id="js-content">	
+		</div>
+
+	</div>
+	
+</body>
+
+</html>

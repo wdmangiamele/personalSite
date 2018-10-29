@@ -1,0 +1,40 @@
+body {
+    font-family: 'Raleway'; font-size: 20px;
+}
+#mainContainer {
+	font-size:2em;
+    max-width: 850px;
+    margin: auto;
+}
+
+div.name {
+	margin: auto;
+    width: 100%;
+}
+
+#theMoneyMaker{
+	float: right;
+    width: 25%;
+	height= 35%;
+}
+
+li{
+	font-size: 1em;
+}
+
+#contact{
+	
+}
+
+a {
+	color: black;
+}
+
+a:hover{
+	color: green;
+}
+a:visited{
+	color: black;
+}
+
+
